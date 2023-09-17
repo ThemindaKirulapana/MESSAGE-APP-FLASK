@@ -22,7 +22,7 @@ mysql = MySQL(app)
 
 @app.route('/main')
 def main():
-    return "Welcome to the application"
+    return render_template('welcome.html')
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -60,6 +60,13 @@ def send_message():
         # Render the form template when the page is accessed via GET request
         return render_template('messagebox.html')
 
+# @app.route('/', methods=['GET', 'POST'])
+# def gotoRegistre():
+
+#     if 'go_to_register' in request.form:
+#             # Redirect to the register page
+#             return redirect('/register')
+#     return render_template('message.html')
 
 @app.route('/message', methods=['GET', 'POST'])
 def show_message():
@@ -70,6 +77,7 @@ def show_message():
         username = request.form['username']
         password = request.form['password']
         h.update(password.encode())
+        
 
         hashpw=h.hexdigest()
 

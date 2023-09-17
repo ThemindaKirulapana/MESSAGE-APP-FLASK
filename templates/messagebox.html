@@ -67,7 +67,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-11 row-cols-6">
                       <label for="role"> USER ROLE</label>
-                      <Select id="role" name="role" class="form-control" >
+                      <Select id="role" name="role" class="form-control" required >
                         <option>Admin</option>
                         <option>User</option>
                     </Select>
@@ -75,10 +75,11 @@
                    
                     <div class="form-group col-md-11 ">
                         <label for="exampleFormControlTextarea3">MESSAGE</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea3" rows="6" name="message"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea3" rows="6" name="message" required></textarea>
                         <br>
                         <br>
                         <button type="submit" class="btn btn-primary">Submit Message</button>
+                        <button type="submit" class="btn btn-primary"  name="go_to_register">Go to Register</button>
 
                     </div>
                   <div> 
