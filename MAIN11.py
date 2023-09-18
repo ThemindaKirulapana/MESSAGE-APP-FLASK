@@ -20,11 +20,15 @@ app.config['MYSQL_DB'] = 'massageapp'
 mysql = MySQL(app)
 
 
+  
+
 @app.route('/main')
 def main():
+        
+    
     return render_template('welcome.html')
 
-
+  
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST' :
