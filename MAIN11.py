@@ -38,7 +38,9 @@ def register():
 
          cursor.execute("INSERT INTO users VALUES (NULL, %s, %s, %s)", (role, username, hashpw))
          mysql.connection.commit()
+         
          cursor.close()
+         return redirect('/')
     
     return render_template('register.html')
 
